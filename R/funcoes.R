@@ -3,7 +3,7 @@ modelo_diamonds <- function(){
 
   # Pacotes ------------------------------------------------------------------
 
-  library(ggplot2)
+  #library(ggplot2)
   library(tidymodels)
   library(tidyverse)
   library(vip)
@@ -149,12 +149,12 @@ modelo_diamonds <- function(){
 
 
 
-  collect_predictions(diamonds_last_fit) %>%
-    ggplot(aes(exp(.pred), (exp(price_log)-exp(.pred)))) +
-    geom_point() +
-    geom_smooth(se = FALSE)
+ #collect_predictions(diamonds_last_fit) %>%
+ #  ggplot(aes(exp(.pred), (exp(price_log)-exp(.pred)))) +
+ #  geom_point() +
+ #  geom_smooth(se = FALSE)
 
-  vip(diamonds_last_fit$.workflow[[1]]$fit$fit)
+ #vip(diamonds_last_fit$.workflow[[1]]$fit$fit)
 
 
 
