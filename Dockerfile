@@ -1,9 +1,10 @@
-FROM rocker/tidyverse
+FROM rstudio/plumber
 
 COPY . .
 
 RUN Rscript -e "install.packages('ggplot2')"
 RUN Rscript -e "install.packages('tidymodels')"
+RUN Rscript -e "install.packages('tidyverse')"
 RUN Rscript -e "install.packages('vip')"
 RUN Rscript -e "install.packages('jsonlite')"
 RUN Rscript -e "install.packages('glmnet')"
