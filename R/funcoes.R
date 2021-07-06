@@ -191,7 +191,7 @@ modelo_diamonds <- function(){
     )
 
 
-  print(toJSON(diamonds_com_previsao))
+  list(toJSON(diamonds_com_previsao))
 
   # guardar o modelo para usar depois ---------------------------------------
   #saveRDS(diamonds_final_model, file = "diamonds_final_model.rds")
